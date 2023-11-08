@@ -1,5 +1,7 @@
 body{
     background-color: #1a1a1a !important;
+    margin: 0;
+    padding: 0;
 }
 
 .container{
@@ -9,16 +11,26 @@ body{
 }
 
 .content{
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
+    max-width: 100%;
 }
 
-@media screen and (min-width: 480px) {
-    .about-me, .profile-pic{
-       width: 100%;
-       margin: 0;
-       display: inline-block;
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Media Queries for Responsiveness ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width: 1023px) {
+    .navbar-brand {
+        border-right: 1px solid transparent !important;
+    }
+    .navbar.navbar-expand-lg{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar.navbar-expand-lg {
+        padding: 10px 0;
+    }
+
+    .picture-border {
+        max-width: 100%;
     }
 }
 
@@ -32,22 +44,27 @@ body{
     margin: 0 auto;
 }
 
-.typed-msg{
-    font-size: 18px;
-    font-family: 'Junge', cursive;
+.profile-img{
+    max-width: 100%;
+    height: auto;
 }
 
-p{
+.about-me{
     font-size: 18px;
     font-family: 'Junge', cursive;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
 }
 
 .nav-item{
     font-family: 'Junge', cursive;
-    padding: 10px 15px 0px 0px;
+    padding: 0px 15px 0px 0px;
 }
 
 .navbar-brand{
+    font-family: 'Junge', cursive;
     padding: 10px 25px 0px 5px;
-    border-right: 2px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
 }
+
