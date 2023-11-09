@@ -12,6 +12,9 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
+    height: 110%;
+    width: 110%;
+    z-index: -1;
 }
 
 .container{
