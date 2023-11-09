@@ -3,17 +3,31 @@ body{
     background-color: #1a1a1a !important;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+#bg{
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .container{
-    background-color: #1a1a1a;
     color: whitesmoke;
     min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .content{
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 50px;
 }
 
