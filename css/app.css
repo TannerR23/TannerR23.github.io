@@ -1,19 +1,26 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Variables ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+:root{
+    --primaryColour: #1a1a1a;
+    --secondaryColour: #0a0a0a;
+    --navHeight: 65px;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body{
-    background-color: #1a1a1a !important;
+    background-color: var(--primaryColour) !important;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 #bg{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 110%;
-    width: 110%;
+    margin-top: calc(var(--navHeight) + 1px);
+    height: 100vh;
+    width: 100vw;
     z-index: -1;
 }
 
@@ -24,9 +31,17 @@ body{
 
 .content{
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(rgba(16, 16, 16, 0.6), transparent 50%, transparent 50%, rgba(16, 16, 16, 0.6));
     padding: 50px;
+    border-radius: 50px;
 }
+
+p{
+    color: whitesmoke;
+    text-shadow: 0 0 5px whitesmoke;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Profile Image ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .profile-pic .picture-border {
     width: 400px;
@@ -52,21 +67,7 @@ body{
     height: auto;
 }
 
-p{
-    color: whitesmoke;
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Media Queries for Responsiveness ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media screen and (max-width: 1023px) {
-    .navbar-brand {
-        border-right: 1px solid transparent !important;
-    }
-
-    body{
-        overflow: visible;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .navbar.navbar-expand-lg {
         padding: 10px 0;
@@ -75,18 +76,78 @@ p{
     .picture-border {
         max-width: 100%;
     }
+
+    .navbar.navbar-expand-lg .navbar-collapse {
+        width: 50% !important;
+    }
+
+    .content{
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .navbar.navbar-expand-lg .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        max-height: 100%;
+        width: 33%;
+        margin-top: calc(var(--navHeight) - 1px);
+        padding: 5px 10px 0px 10px;
+        overflow-y: auto;
+        background-color: var(--secondaryColour) !important;
+    }
+
+    #contact{
+        position: fixed;
+        bottom: 0;
+    }
+
+    .navbar-brand {
+        border-right: 1px solid transparent !important;
+    }
+
+    .icons {
+        width: 30px !important;
+        margin-right: 15px;
+    }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Nav Bar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .nav-item{
     font-family: 'Junge', cursive;
-    padding: 0px 15px 0px 0px;
+    margin-top: 5px;
+    padding: 0px 15px 5px 15px;
 }
 
 .navbar-brand{
     font-family: 'Junge', cursive;
     padding: 10px 25px 0px 5px;
     border-right: 1px solid whitesmoke;
+}
+
+.navbar.navbar.navbar-expand-lg{
+    background-color: var(--secondaryColour) !important;
+}
+
+nav{
+    height: var(--navHeight);
+}
+
+.nav-item-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler{
+    margin-right: 20px;
+}
+
+.icons{
+    width: 0px;
 }
 

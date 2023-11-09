@@ -15,7 +15,7 @@
 <body>
     <!-- Nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
+        <div class="container-fluid nav-container">
           <a class="navbar-brand" href="index.html">Tanner Rowe</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,10 +23,22 @@
           <div class="collapse navbar-collapse navbar-expand-lg" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="html/journey.html">Journey</a>
+                <div class="nav-item-container">
+                  <img class="icons" src="res/icon-journey.png" alt="Journey Icon">
+                  <a class="nav-link" aria-current="page" href="html/journey.html">Journey</a>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="html/extra.html">Extra</a>
+                <div class="nav-item-container">
+                  <img class="icons" src="res/icon-extra.png" alt="Extra Icon">
+                  <a class="nav-link" href="html/extra.html">Extra</a>
+                </div>
+              </li>
+              <li class="nav-item" id="contact">
+                <div class="nav-item-container">
+                  <img class="icons" src="res/icon-contact.png" alt="Contact Icon">
+                  <a class="nav-link" href="html/contact.html">Contact Me</a>
+                </div>
               </li>
             </ul>
           </div>

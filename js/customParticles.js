@@ -3,10 +3,10 @@
 particlesJS("bg", {
     "particles": {
       "number": {
-        "value": 380,
+        "value": 500,
         "density": {
           "enable": true,
-          "value_area": 800
+          "value_area": 1000
         }
       },
       "color": {
@@ -19,7 +19,7 @@ particlesJS("bg", {
           "color": "#000000"
         },
         "polygon": {
-          "nb_sides": 5
+          "nb_sides": 8
         },
         "image": {
           "src": "img/github.svg",
@@ -51,7 +51,7 @@ particlesJS("bg", {
         "enable": true,
         "distance": 150,
         "color": "#ffffff",
-        "opacity": 0.1,
+        "opacity": 0.05,
         "width": 1
       },
       "move": {
