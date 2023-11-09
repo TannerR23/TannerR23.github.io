@@ -64,6 +64,10 @@ p{
     .navbar-brand {
         border-right: 1px solid transparent !important;
     }
+
+    body{
+        overflow: visible;
+    }
 }
 
 @media screen and (max-width: 767px) {
